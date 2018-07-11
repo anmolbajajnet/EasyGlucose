@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38D1AED15AABC87BB87EB022 /* Pods_EasyGlucoseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B07A7962F16C10EF4252A7 /* Pods_EasyGlucoseTests.framework */; };
+		926926A96343AF9659331F65 /* Pods_EasyGlucose.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BB04D439AD2D59CE1BF758A /* Pods_EasyGlucose.framework */; };
 		BA6853C420F691A8008381CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6853C320F691A8008381CD /* AppDelegate.swift */; };
 		BA6853C620F691A8008381CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6853C520F691A8008381CD /* ViewController.swift */; };
 		BA6853C920F691A8008381CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA6853C720F691A8008381CD /* Main.storyboard */; };
@@ -19,6 +21,7 @@
 		BA70F6D320F6C17500589C56 /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA70F6D220F6C17500589C56 /* FeedTableViewController.swift */; };
 		BA70F6D520F6C18100589C56 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA70F6D420F6C18100589C56 /* ComposeViewController.swift */; };
 		BA70F6D720F6C4E100589C56 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA70F6D620F6C4E100589C56 /* Log.swift */; };
+		E145DEB13B5101C22DB97B5A /* Pods_EasyGlucoseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB7CB3409EEF5DC4ADBDF844 /* Pods_EasyGlucoseUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3BB04D439AD2D59CE1BF758A /* Pods_EasyGlucose.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyGlucose.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		66961DF96EA2C233D2282C59 /* Pods-EasyGlucose.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyGlucose.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyGlucose/Pods-EasyGlucose.release.xcconfig"; sourceTree = "<group>"; };
+		78B07A7962F16C10EF4252A7 /* Pods_EasyGlucoseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyGlucoseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		92CEEC0B29F2C54EEA18A74C /* Pods-EasyGlucoseUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyGlucoseUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasyGlucoseUITests/Pods-EasyGlucoseUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BA6853C020F691A8008381CD /* EasyGlucose.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyGlucose.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA6853C320F691A8008381CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA6853C520F691A8008381CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +64,11 @@
 		BA70F6D220F6C17500589C56 /* FeedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
 		BA70F6D420F6C18100589C56 /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 		BA70F6D620F6C4E100589C56 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Log.swift; path = EasyGlucose/Models/Log.swift; sourceTree = SOURCE_ROOT; };
+		C617BB2B3A2718C1FCD0A3C2 /* Pods-EasyGlucoseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyGlucoseUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyGlucoseUITests/Pods-EasyGlucoseUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CC37F5975F490F89BC635C49 /* Pods-EasyGlucoseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyGlucoseTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyGlucoseTests/Pods-EasyGlucoseTests.release.xcconfig"; sourceTree = "<group>"; };
+		D7E471C1311838BC68A71473 /* Pods-EasyGlucose.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyGlucose.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasyGlucose/Pods-EasyGlucose.debug.xcconfig"; sourceTree = "<group>"; };
+		DB7CB3409EEF5DC4ADBDF844 /* Pods_EasyGlucoseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyGlucoseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E072EEB7DCAA63E42E280987 /* Pods-EasyGlucoseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyGlucoseTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasyGlucoseTests/Pods-EasyGlucoseTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				926926A96343AF9659331F65 /* Pods_EasyGlucose.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38D1AED15AABC87BB87EB022 /* Pods_EasyGlucoseTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,12 +92,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E145DEB13B5101C22DB97B5A /* Pods_EasyGlucoseUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B3D089D5E5B626E5883AF15C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D7E471C1311838BC68A71473 /* Pods-EasyGlucose.debug.xcconfig */,
+				66961DF96EA2C233D2282C59 /* Pods-EasyGlucose.release.xcconfig */,
+				E072EEB7DCAA63E42E280987 /* Pods-EasyGlucoseTests.debug.xcconfig */,
+				CC37F5975F490F89BC635C49 /* Pods-EasyGlucoseTests.release.xcconfig */,
+				92CEEC0B29F2C54EEA18A74C /* Pods-EasyGlucoseUITests.debug.xcconfig */,
+				C617BB2B3A2718C1FCD0A3C2 /* Pods-EasyGlucoseUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		BA6853B720F691A8008381CD = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +119,8 @@
 				BA6853DA20F691AC008381CD /* EasyGlucoseTests */,
 				BA6853E520F691AC008381CD /* EasyGlucoseUITests */,
 				BA6853C120F691A8008381CD /* Products */,
+				B3D089D5E5B626E5883AF15C /* Pods */,
+				D5A707AAAA016C968F4FD39E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -164,6 +194,16 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		D5A707AAAA016C968F4FD39E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3BB04D439AD2D59CE1BF758A /* Pods_EasyGlucose.framework */,
+				78B07A7962F16C10EF4252A7 /* Pods_EasyGlucoseTests.framework */,
+				DB7CB3409EEF5DC4ADBDF844 /* Pods_EasyGlucoseUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -171,9 +211,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BA6853EB20F691AC008381CD /* Build configuration list for PBXNativeTarget "EasyGlucose" */;
 			buildPhases = (
+				4730ADAB330E36F1FB05A6CC /* [CP] Check Pods Manifest.lock */,
 				BA6853BC20F691A8008381CD /* Sources */,
 				BA6853BD20F691A8008381CD /* Frameworks */,
 				BA6853BE20F691A8008381CD /* Resources */,
+				B121355059DEF57FE3FEEF57 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -188,6 +230,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BA6853EE20F691AC008381CD /* Build configuration list for PBXNativeTarget "EasyGlucoseTests" */;
 			buildPhases = (
+				DFCE5A99AFC5DC89A3D17BE9 /* [CP] Check Pods Manifest.lock */,
 				BA6853D320F691AC008381CD /* Sources */,
 				BA6853D420F691AC008381CD /* Frameworks */,
 				BA6853D520F691AC008381CD /* Resources */,
@@ -206,6 +249,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BA6853F120F691AC008381CD /* Build configuration list for PBXNativeTarget "EasyGlucoseUITests" */;
 			buildPhases = (
+				342464790D4EEB16666D2B3D /* [CP] Check Pods Manifest.lock */,
 				BA6853DE20F691AC008381CD /* Sources */,
 				BA6853DF20F691AC008381CD /* Frameworks */,
 				BA6853E020F691AC008381CD /* Resources */,
@@ -289,6 +333,83 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		342464790D4EEB16666D2B3D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EasyGlucoseUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4730ADAB330E36F1FB05A6CC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EasyGlucose-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B121355059DEF57FE3FEEF57 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-EasyGlucose/Pods-EasyGlucose-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EasyGlucose/Pods-EasyGlucose-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFCE5A99AFC5DC89A3D17BE9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EasyGlucoseTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BA6853BC20F691A8008381CD /* Sources */ = {
@@ -472,6 +593,7 @@
 		};
 		BA6853EC20F691AC008381CD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7E471C1311838BC68A71473 /* Pods-EasyGlucose.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -489,6 +611,7 @@
 		};
 		BA6853ED20F691AC008381CD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66961DF96EA2C233D2282C59 /* Pods-EasyGlucose.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -506,6 +629,7 @@
 		};
 		BA6853EF20F691AC008381CD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E072EEB7DCAA63E42E280987 /* Pods-EasyGlucoseTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -526,6 +650,7 @@
 		};
 		BA6853F020F691AC008381CD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC37F5975F490F89BC635C49 /* Pods-EasyGlucoseTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -546,6 +671,7 @@
 		};
 		BA6853F220F691AC008381CD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92CEEC0B29F2C54EEA18A74C /* Pods-EasyGlucoseUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -565,6 +691,7 @@
 		};
 		BA6853F320F691AC008381CD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C617BB2B3A2718C1FCD0A3C2 /* Pods-EasyGlucoseUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
