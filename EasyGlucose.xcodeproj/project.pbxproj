@@ -100,12 +100,10 @@
 			isa = PBXGroup;
 			children = (
 				BA6853C320F691A8008381CD /* AppDelegate.swift */,
-				BA6853C520F691A8008381CD /* ViewController.swift */,
-				BA6853C720F691A8008381CD /* Main.storyboard */,
-				BA6853CD20F691AC008381CD /* Assets.xcassets */,
-				BA6853CF20F691AC008381CD /* LaunchScreen.storyboard */,
+				BA70F6CC20F69EC000589C56 /* Views */,
+				BA70F6CB20F69E8600589C56 /* Assets */,
+				BA70F6CD20F69EFF00589C56 /* Models */,
 				BA6853D220F691AC008381CD /* Info.plist */,
-				BA6853CA20F691A8008381CD /* EasyGlucose.xcdatamodeld */,
 			);
 			path = EasyGlucose;
 			sourceTree = "<group>";
@@ -126,6 +124,32 @@
 				BA6853E820F691AC008381CD /* Info.plist */,
 			);
 			path = EasyGlucoseUITests;
+			sourceTree = "<group>";
+		};
+		BA70F6CB20F69E8600589C56 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				BA6853CD20F691AC008381CD /* Assets.xcassets */,
+				BA6853C720F691A8008381CD /* Main.storyboard */,
+				BA6853CF20F691AC008381CD /* LaunchScreen.storyboard */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		BA70F6CC20F69EC000589C56 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BA6853C520F691A8008381CD /* ViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BA70F6CD20F69EFF00589C56 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BA6853CA20F691A8008381CD /* EasyGlucose.xcdatamodeld */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
