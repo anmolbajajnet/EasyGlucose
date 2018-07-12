@@ -14,9 +14,15 @@ class Log: Object {
     // MARK: - Init
     // MARK: - Persisted Properties
    @objc dynamic var id = UUID().uuidString
-   @objc dynamic var log = ""
+   @objc dynamic var glucose = 0
+   @objc dynamic var note = ""
    @objc dynamic var isFavorite = false
    @objc dynamic var timestamp = Date().timeIntervalSinceReferenceDate
+    
+    override static func primaryKey() -> String? {
+        return "id"
+    }
+    
 
 // MARK: - Dynamic properties
 // MARK: - Meta

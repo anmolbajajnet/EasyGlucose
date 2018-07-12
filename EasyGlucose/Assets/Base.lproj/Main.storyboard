@@ -132,8 +132,8 @@
                                     <action selector="logButton:" destination="sSJ-KF-KwE" eventType="touchUpInside" id="OIP-B0-vz6"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mood" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5y-9p-Fsb">
-                                <rect key="frame" x="16" y="118" width="44" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Note:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5y-9p-Fsb">
+                                <rect key="frame" x="16" y="118" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -154,6 +154,7 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="glucoseTextField" destination="lsH-7V-ZMu" id="bx8-hv-3vw"/>
+                        <outlet property="moodTextField" destination="j6k-sV-oPI" id="Ng5-tR-XZO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iv6-rY-3lb" userLabel="First Responder" sceneMemberID="firstResponder"/>
