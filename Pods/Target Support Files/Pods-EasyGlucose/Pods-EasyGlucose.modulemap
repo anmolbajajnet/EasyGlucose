@@ -1,0 +1,6 @@
+framework module Pods_EasyGlucose {
+  umbrella header "Pods-EasyGlucose-umbrella.h"
+
+  export *
+  module * { export * }
+}
