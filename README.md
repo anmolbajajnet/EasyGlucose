@@ -18,4 +18,4 @@ Steps:
 
 Consider creating a branch to do your programming on. If there are any problems with your code, can simply delete the branch and start anew.
 
-For Realm => this is extremely helpful!
+For Realm => https://realm.io/docs/swift/latest/ this is extremely helpful!
