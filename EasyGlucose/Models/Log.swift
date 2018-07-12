@@ -12,20 +12,14 @@ import RealmSwift
 class Log: Object {
     
     // MARK: - Init
-    
-    
     // MARK: - Persisted Properties
    @objc dynamic var id = UUID().uuidString
-   @objc dynamic var message = ""
+   @objc dynamic var log = ""
    @objc dynamic var isFavorite = false
    @objc dynamic var timestamp = Date().timeIntervalSinceReferenceDate
 
 // MARK: - Dynamic properties
-
-
 // MARK: - Meta
-
-
 // MARK: - Etc
 
 }

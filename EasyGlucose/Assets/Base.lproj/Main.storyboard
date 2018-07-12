@@ -128,13 +128,33 @@
                                 <state key="normal" title="Log" backgroundImage="112">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="logButton:" destination="sSJ-KF-KwE" eventType="touchUpInside" id="OIP-B0-vz6"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mood" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5y-9p-Fsb">
+                                <rect key="frame" x="16" y="118" width="44" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j6k-sV-oPI">
+                                <rect key="frame" x="112" y="113" width="145" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="vIP-lC-4ck"/>
                     </view>
                     <toolbarItems/>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="glucoseTextField" destination="lsH-7V-ZMu" id="bx8-hv-3vw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iv6-rY-3lb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -157,7 +177,7 @@
             </objects>
             <point key="canvasLocation" x="137" y="1313"/>
         </scene>
-        <!--Insight-->
+        <!--Insights-->
         <scene sceneID="BbU-Vc-o5X">
             <objects>
                 <viewController id="cxc-9K-fRf" sceneMemberID="viewController">
@@ -167,7 +187,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="J0e-fz-q1F"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Insight" id="Gth-A8-Yoj"/>
+                    <tabBarItem key="tabBarItem" title="Insights" id="Gth-A8-Yoj"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bnk-Kf-d6T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
