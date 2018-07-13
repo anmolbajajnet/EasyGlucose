@@ -7,10 +7,9 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ComposeViewController: UIViewController {
-
-
 
     @IBAction func close() {
         dismiss(animated: true, completion: nil)
@@ -19,23 +18,27 @@ class ComposeViewController: UIViewController {
     @IBOutlet weak var glucoseTextField: UITextField!
     @IBOutlet weak var moodTextField: UITextField!
     
+   // The text property of a text label is an optional, you have to unwrap it before using it. ??
     @IBAction func logButton(_ sender: UIButton) {
-        let myGlucose = glucoseTextField.text
-        if myGlucose?.isEmpty ?? true{
-            print("Alert popup displaying that textfield is empty")
-            emptyGlucoseAlert()
-        } else  {
+        let myGlucose = glucoseTextField.text!
+       // if myGlucose?.isEmpty ?? true{
+    //        emptyGlucoseAlert()
+   //     } else  {
             print(myGlucose)
+            let myLog = Log()
+            myLog.note = myGlucose
+            let realm = try! Realm()
+            try! realm.write {
+                realm.add(myLog)
             }
+            
         }
-    
-    
-        
+
     
 
 
     
-    
+    // ignore this for now
     func emptyGlucoseAlert() {
         let alert = UIAlertController(title: "Made a mistake?", message: "Your glucose was left empty. Please enter your reading! :)", preferredStyle: .alert)
         let action = UIAlertAction(title: "Log again", style: .default, handler: nil)
@@ -46,7 +49,8 @@ class ComposeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+
+        
     }
 
     override func didReceiveMemoryWarning() {
