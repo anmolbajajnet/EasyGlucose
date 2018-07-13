@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		38D1AED15AABC87BB87EB022 /* Pods_EasyGlucoseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B07A7962F16C10EF4252A7 /* Pods_EasyGlucoseTests.framework */; };
 		926926A96343AF9659331F65 /* Pods_EasyGlucose.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BB04D439AD2D59CE1BF758A /* Pods_EasyGlucose.framework */; };
+		BA52EBCF20F8364B00D10CBD /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA52EBCE20F8364B00D10CBD /* TableViewController.swift */; };
+		BA52EBD120F8366500D10CBD /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA52EBD020F8366500D10CBD /* TableViewCell.swift */; };
 		BA6853C420F691A8008381CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6853C320F691A8008381CD /* AppDelegate.swift */; };
 		BA6853C620F691A8008381CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6853C520F691A8008381CD /* ViewController.swift */; };
 		BA6853C920F691A8008381CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA6853C720F691A8008381CD /* Main.storyboard */; };
@@ -18,7 +20,6 @@
 		BA6853DC20F691AC008381CD /* EasyGlucoseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6853DB20F691AC008381CD /* EasyGlucoseTests.swift */; };
 		BA6853E720F691AC008381CD /* EasyGlucoseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6853E620F691AC008381CD /* EasyGlucoseUITests.swift */; };
 		BA70F6D120F6C12400589C56 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA70F6D020F6C12400589C56 /* ProfileViewController.swift */; };
-		BA70F6D320F6C17500589C56 /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA70F6D220F6C17500589C56 /* FeedTableViewController.swift */; };
 		BA70F6D520F6C18100589C56 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA70F6D420F6C18100589C56 /* ComposeViewController.swift */; };
 		BA70F6D720F6C4E100589C56 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA70F6D620F6C4E100589C56 /* Log.swift */; };
 		E145DEB13B5101C22DB97B5A /* Pods_EasyGlucoseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB7CB3409EEF5DC4ADBDF844 /* Pods_EasyGlucoseUITests.framework */; };
@@ -46,6 +47,8 @@
 		66961DF96EA2C233D2282C59 /* Pods-EasyGlucose.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyGlucose.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyGlucose/Pods-EasyGlucose.release.xcconfig"; sourceTree = "<group>"; };
 		78B07A7962F16C10EF4252A7 /* Pods_EasyGlucoseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyGlucoseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92CEEC0B29F2C54EEA18A74C /* Pods-EasyGlucoseUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyGlucoseUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasyGlucoseUITests/Pods-EasyGlucoseUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BA52EBCE20F8364B00D10CBD /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		BA52EBD020F8366500D10CBD /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		BA6853C020F691A8008381CD /* EasyGlucose.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyGlucose.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA6853C320F691A8008381CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA6853C520F691A8008381CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,7 +64,6 @@
 		BA6853E620F691AC008381CD /* EasyGlucoseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyGlucoseUITests.swift; sourceTree = "<group>"; };
 		BA6853E820F691AC008381CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA70F6D020F6C12400589C56 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		BA70F6D220F6C17500589C56 /* FeedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
 		BA70F6D420F6C18100589C56 /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 		BA70F6D620F6C4E100589C56 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Log.swift; path = EasyGlucose/Models/Log.swift; sourceTree = SOURCE_ROOT; };
 		C617BB2B3A2718C1FCD0A3C2 /* Pods-EasyGlucoseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyGlucoseUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyGlucoseUITests/Pods-EasyGlucoseUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -178,8 +180,9 @@
 			isa = PBXGroup;
 			children = (
 				BA6853C520F691A8008381CD /* ViewController.swift */,
+				BA52EBCE20F8364B00D10CBD /* TableViewController.swift */,
+				BA52EBD020F8366500D10CBD /* TableViewCell.swift */,
 				BA70F6D020F6C12400589C56 /* ProfileViewController.swift */,
-				BA70F6D220F6C17500589C56 /* FeedTableViewController.swift */,
 				BA70F6D420F6C18100589C56 /* ComposeViewController.swift */,
 			);
 			path = Views;
@@ -419,7 +422,8 @@
 				BA6853C620F691A8008381CD /* ViewController.swift in Sources */,
 				BA70F6D720F6C4E100589C56 /* Log.swift in Sources */,
 				BA6853CC20F691A8008381CD /* EasyGlucose.xcdatamodeld in Sources */,
-				BA70F6D320F6C17500589C56 /* FeedTableViewController.swift in Sources */,
+				BA52EBD120F8366500D10CBD /* TableViewCell.swift in Sources */,
+				BA52EBCF20F8364B00D10CBD /* TableViewController.swift in Sources */,
 				BA70F6D520F6C18100589C56 /* ComposeViewController.swift in Sources */,
 				BA70F6D120F6C12400589C56 /* ProfileViewController.swift in Sources */,
 				BA6853C420F691A8008381CD /* AppDelegate.swift in Sources */,

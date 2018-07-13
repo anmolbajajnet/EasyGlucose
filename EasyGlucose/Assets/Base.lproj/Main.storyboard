@@ -56,16 +56,16 @@
             </objects>
             <point key="canvasLocation" x="136.875" y="132.04225352112675"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Easy Glucose-->
         <scene sceneID="e7c-al-kX4">
             <objects>
-                <tableViewController id="kF9-zP-ImK" sceneMemberID="viewController">
+                <tableViewController id="kF9-zP-ImK" customClass="TableViewController" customModule="EasyGlucose" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="SFl-25-FuZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedTableViewCell" id="IGt-Om-DIQ" userLabel="FeedTableViewCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="IGt-Om-DIQ" customClass="TableViewCell" customModule="EasyGlucose" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IGt-Om-DIQ" id="QsZ-KW-j8w">
@@ -79,8 +79,8 @@
                             <outlet property="delegate" destination="kF9-zP-ImK" id="B2s-ee-cOO"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="KVC-LH-GWL" userLabel="Log">
-                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="Smo-FN-qbY">
+                    <navigationItem key="navigationItem" title="Easy Glucose" id="KVC-LH-GWL" userLabel="Log">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Smo-FN-qbY">
                             <connections>
                                 <segue destination="sSJ-KF-KwE" kind="presentation" id="hlM-eG-TRa"/>
                             </connections>
@@ -130,6 +130,7 @@
                                 </state>
                                 <connections>
                                     <action selector="logButton:" destination="sSJ-KF-KwE" eventType="touchUpInside" id="OIP-B0-vz6"/>
+                                    <segue destination="Dpl-8Z-6NY" kind="presentation" id="Z19-de-kO1"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Note:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5y-9p-Fsb">
@@ -197,7 +198,7 @@
         <!--Profile-->
         <scene sceneID="swA-Yn-K4P">
             <objects>
-                <viewController id="Mas-fa-tgo" sceneMemberID="viewController">
+                <viewController id="Mas-fa-tgo" customClass="ProfileViewController" customModule="EasyGlucose" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qlo-Np-VpG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -282,4 +283,8 @@
         <image name="112" width="960" height="540"/>
         <image name="speakers-empty" width="25" height="25"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Z19-de-kO1"/>
+    </inferredMetricsTieBreakers>
+    <color key="tintColor" red="0.0" green="0.29606428951520947" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

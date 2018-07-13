@@ -27,12 +27,17 @@ class ComposeViewController: UIViewController {
             print(myGlucose)
             let myLog = Log()
             myLog.note = myGlucose
-            let realm = try! Realm()
-            try! realm.write {
+            let realm = try! Realm() //create a realm object
+            try! realm.write {       // write the object to swift
                 realm.add(myLog)
             }
-            
-        }
+        
+    }
+        
+        
+
+    
+    
 
     
 
