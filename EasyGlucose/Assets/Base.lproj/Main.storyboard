@@ -182,7 +182,7 @@
         <!--Insights-->
         <scene sceneID="BbU-Vc-o5X">
             <objects>
-                <viewController id="cxc-9K-fRf" sceneMemberID="viewController">
+                <viewController id="cxc-9K-fRf" customClass="ChartsViewController" customModule="EasyGlucose" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Cy-i2-UyJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
