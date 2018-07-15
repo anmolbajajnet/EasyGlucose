@@ -6,7 +6,7 @@ target 'EasyGlucose' do
   use_frameworks!
 
   # Pods for EasyGlucose
-
+  pod 'Charts', :git => 'https://github.com/danielgindi/Charts', :branch=> 'master'
   pod 'RealmSwift'
 
   target 'EasyGlucoseTests' do

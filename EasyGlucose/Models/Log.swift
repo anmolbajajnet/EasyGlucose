@@ -29,7 +29,19 @@ class Log: Object {
         return "logID"
     }
 }
-
+class afterMealLog: Object{
+    // MARK: - Persisted Properties
+    @objc dynamic var logID = UUID().uuidString //id that uniquely identifies the object
+    @objc dynamic var measurement = ""
+    @objc dynamic var note = ""
+    
+    @objc dynamic var timestamp = Date()
+    
+    // setting up the primary key
+    override static func primaryKey() -> String? {
+        return "logID"
+    }
+}
 class LogsManager: NSObject {
         
         static let shared = LogsManager()
@@ -62,7 +74,6 @@ class LogsManager: NSObject {
     }
     
 }
-
 
 
 

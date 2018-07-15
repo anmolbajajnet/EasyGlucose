@@ -89,7 +89,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xZr-n2-eXo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137" y="2112"/>
+            <point key="canvasLocation" x="137" y="1807"/>
         </scene>
         <!--Compose View Controller-->
         <scene sceneID="Sti-5u-RIP">
@@ -147,6 +147,21 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="When was this measured" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lav-qL-XTY">
+                                <rect key="frame" x="16" y="177" width="192" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="XIj-mR-w1m">
+                                <rect key="frame" x="130" y="223" width="109" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Before"/>
+                                    <segment title="After"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="vIP-lC-4ck"/>
@@ -155,12 +170,13 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="glucoseTextField" destination="lsH-7V-ZMu" id="bx8-hv-3vw"/>
+                        <outlet property="mealTimeToggle" destination="XIj-mR-w1m" id="ruN-OV-7l4"/>
                         <outlet property="moodTextField" destination="j6k-sV-oPI" id="Ng5-tR-XZO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iv6-rY-3lb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.875" y="2923.9436619718308"/>
+            <point key="canvasLocation" x="137" y="2526"/>
         </scene>
         <!--Log-->
         <scene sceneID="q1Z-Bc-hTG">
@@ -177,23 +193,40 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PMa-vb-eUl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137" y="1313"/>
+            <point key="canvasLocation" x="137" y="1066"/>
         </scene>
-        <!--Insights-->
-        <scene sceneID="BbU-Vc-o5X">
+        <!--Item-->
+        <scene sceneID="rDs-lg-3lw">
             <objects>
-                <viewController id="cxc-9K-fRf" customClass="ChartsViewController" customModule="EasyGlucose" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5Cy-i2-UyJ">
+                <viewController id="Mi2-xc-6ol" customClass="ChartsViewController" customModule="EasyGlucose" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xkt-yR-MLj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N7s-3B-oOj" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="16" y="134" width="288" height="343"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.86618521953327265" blue="0.93306530051197678" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Blood glucose measurement graph" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tx-GT-xNl">
+                                <rect key="frame" x="27" y="42" width="267" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="J0e-fz-q1F"/>
+                        <viewLayoutGuide key="safeArea" id="GjZ-XC-aC0"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Insights" id="Gth-A8-Yoj"/>
+                    <tabBarItem key="tabBarItem" title="Item" id="SYX-CS-zH3"/>
+                    <connections>
+                        <outlet property="lineChartView" destination="N7s-3B-oOj" id="k4C-tF-Ick"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bnk-Kf-d6T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J5k-cC-j09" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1054" y="1312"/>
+            <point key="canvasLocation" x="1053.75" y="1065.8450704225352"/>
         </scene>
         <!--Profile-->
         <scene sceneID="swA-Yn-K4P">
@@ -257,7 +290,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mO6-2Q-QO7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1989" y="1312"/>
+            <point key="canvasLocation" x="2604" y="995"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="JUX-Y2-2EX">
@@ -270,8 +303,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="Dpl-8Z-6NY" kind="relationship" relationship="viewControllers" id="Z3U-2h-k02"/>
-                        <segue destination="cxc-9K-fRf" kind="relationship" relationship="viewControllers" id="cHQ-m2-aGY"/>
                         <segue destination="Mas-fa-tgo" kind="relationship" relationship="viewControllers" id="s1E-Ol-Y7V"/>
+                        <segue destination="Mi2-xc-6ol" kind="relationship" relationship="viewControllers" id="BJI-Zl-eLm"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oDf-OV-Rub" userLabel="First Responder" sceneMemberID="firstResponder"/>
