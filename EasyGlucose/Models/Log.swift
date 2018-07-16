@@ -14,32 +14,30 @@ class Log: Object {
     
     
     // MARK: - Init
-    convenience init(note: String) {
+    convenience init(measurement: Int, tag:String, note: String, timeInRelationToMeal:String) {
         self.init()
+        self.measurement = measurement
+        self.tag = tag
         self.note = note
+        self.timeInRelationToMeal = timeInRelationToMeal
+        
     }
     
     // MARK: - Persisted Properties
     @objc dynamic var logID = UUID().uuidString //id that uniquely identifies the object
-    @objc dynamic var note = ""
+    @objc dynamic var measurement = 0
     @objc dynamic var timestamp = Date()
+    @objc dynamic var tag = ""
+    @objc dynamic var note = ""
+    @objc dynamic var timeInRelationToMeal = "NULL"
     
     // setting up the primary key
     override static func primaryKey() -> String? {
         return "logID"
     }
-}
-class afterMealLog: Object{
-    // MARK: - Persisted Properties
-    @objc dynamic var logID = UUID().uuidString //id that uniquely identifies the object
-    @objc dynamic var measurement = ""
-    @objc dynamic var note = ""
     
-    @objc dynamic var timestamp = Date()
-    
-    // setting up the primary key
-    override static func primaryKey() -> String? {
-        return "logID"
+    override class func indexedProperties()->[String]{
+        return ["measurement","timestamp","tag", "Note", "timeInRelationToMeal"]
     }
 }
 class LogsManager: NSObject {

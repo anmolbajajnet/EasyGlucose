@@ -23,34 +23,36 @@ class ComposeViewController: UIViewController {
     
    // The text property of a text label is an optional, you have to unwrap it before using it. ??
     @IBAction func logButton(_ sender: UIButton) {
+        // TODO: Edge case checks, eg empty fields.
+        // I skipped this so i can get things working first - Tony L.
+        
         let myGlucose = glucoseTextField.text!
-       // if myGlucose?.isEmpty ?? true{
-    //        emptyGlucoseAlert()
-   //     } else  {
-            print(myGlucose)
-        // The if/else control here uses segment controler, should be changed for better method
+        let logToBeSaved = Log()
+        // need to check for edge cases
+        // maybe change the input method from storyboard
+        logToBeSaved.measurement = Int(myGlucose)!
+        logToBeSaved.note = moodTextField.text!
+        // add input methods for other fields here
         
-        //logic: if beforemeal->save Log object, if aftermeal ->save afterMealLog object
-        // this is temporary lazy code to get the graph working, please polish code later.
+        // TODO: "isEnabled" is not the right boolean for state of toggle, fix this
         if mealTimeToggle.isEnabled{
-            let myLog = Log()
-            myLog.note = myGlucose
-            let realm = try! Realm() //create a realm object
-            try! realm.write {       // write the object to swift
-                realm.add(myLog)
-            }
+            logToBeSaved.timeInRelationToMeal = "Before meal"
         }else{
-            let myLog = afterMealLog()
-            myLog.measurement = myGlucose
-            let realm = try! Realm()
-            try! realm.write{
-                realm.add(myLog)
-            }
+            logToBeSaved.timeInRelationToMeal = "After meal"
         }
-
+        print("printing info from log to be saved")
+        print(logToBeSaved.measurement)
+        print(logToBeSaved.note)
+        print(logToBeSaved.timeInRelationToMeal)
         
+        // TODO: generalize this as a function taking in a Object type
+        let realm = try! Realm()
+        try! realm.write {
+            print("Saving data")
+            realm.add(logToBeSaved)
+        }
     }
-        
+    
         
 
     
