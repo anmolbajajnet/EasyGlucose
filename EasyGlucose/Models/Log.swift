@@ -30,6 +30,7 @@ class Log: Object {
     @objc dynamic var tag = ""
     @objc dynamic var note = ""
     @objc dynamic var timeInRelationToMeal = "NULL"
+    @objc dynamic var usedForTesting = false
     
     // setting up the primary key
     override static func primaryKey() -> String? {
