@@ -72,6 +72,17 @@ class LogsManager: NSObject {
         return logs.map({$0}) //get all the objects from the logs object and map will turn it into an array. std feature of swift
     }
     
+    func deleteLog(_ measurement: Log) {
+        let realm = try! Realm()
+        do {
+            try realm.write {
+                realm.delete(measurement)
+            }
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+    
 }
 
 
