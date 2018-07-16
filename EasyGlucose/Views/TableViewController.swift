@@ -53,7 +53,7 @@ class TableViewController: UITableViewController {
         
         let log = logArray[indexPath.row]
         
-        cell.textLabel?.text = log.note
+        cell.textLabel?.text = String(log.measurement)
         return cell
 
     }
