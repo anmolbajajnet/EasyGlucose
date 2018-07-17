@@ -80,7 +80,7 @@ class TableViewController: UITableViewController {
         } 
     }
     
-    var glucose = 0;
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if let selectedLogIndexPath = self.tableView.indexPathForSelectedRow {

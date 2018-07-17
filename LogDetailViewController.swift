@@ -24,6 +24,7 @@ class LogDetailViewController: UIViewController {
         print(mainInstance.glucose)
         
      
+        // 5 is just a random value. research appropriate vals to show appropriate messages.
         if (mainInstance.glucose > 5) {
               rangeDisplay.text = "You are within range!"
         } else {
