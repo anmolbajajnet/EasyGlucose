@@ -12,6 +12,7 @@ class TableViewController: UITableViewController {
     
     var logArray = [Log]()
 
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -77,6 +78,18 @@ class TableViewController: UITableViewController {
             logArray.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         } 
+    }
+    
+    var glucose = 0;
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let selectedLogIndexPath = self.tableView.indexPathForSelectedRow {
+            let selectedLog = logArray[selectedLogIndexPath.row]
+            let logVC = segue.destination as! LogDetailViewController
+            mainInstance.glucose = selectedLog.measurement
+        
+        }
+        
     }
     
 

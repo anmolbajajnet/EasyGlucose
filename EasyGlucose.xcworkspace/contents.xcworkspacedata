@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:LogDetailViewController.swift">
+   </FileRef>
+   <FileRef
       location = "group:EasyGlucose.xcodeproj">
    </FileRef>
    <FileRef
