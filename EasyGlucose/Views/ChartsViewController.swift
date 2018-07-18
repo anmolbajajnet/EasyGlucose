@@ -28,6 +28,7 @@ class ChartsViewController: UIViewController {
     // draw the default graph for data gathered in last 7 days upon loading
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         drawDefaultChart()
         
         // Do any additional setup after loading the view.

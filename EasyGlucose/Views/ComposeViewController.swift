@@ -55,11 +55,6 @@ class ComposeViewController: UIViewController {
     
         
 
-    
-    
-
-    
-
 
     
     // ignore this for now

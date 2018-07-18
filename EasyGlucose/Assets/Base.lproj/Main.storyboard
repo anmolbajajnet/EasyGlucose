@@ -133,7 +133,7 @@
                                 </state>
                                 <connections>
                                     <action selector="logButton:" destination="sSJ-KF-KwE" eventType="touchUpInside" id="OIP-B0-vz6"/>
-                                    <segue destination="Dpl-8Z-6NY" kind="presentation" id="Z19-de-kO1"/>
+                                    <segue destination="RTE-ai-Pl7" kind="show" id="UHB-in-aEE"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Note:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5y-9p-Fsb">
@@ -150,19 +150,19 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="When was this measured" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lav-qL-XTY">
-                                <rect key="frame" x="16" y="177" width="192" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="When was this measured?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lav-qL-XTY">
+                                <rect key="frame" x="16" y="177" width="200" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="XIj-mR-w1m">
-                                <rect key="frame" x="130" y="223" width="109" height="29"/>
+                                <rect key="frame" x="86" y="206" width="171" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="Before"/>
-                                    <segment title="After"/>
+                                    <segment title="Before Meal"/>
+                                    <segment title="After Meal"/>
                                 </segments>
                             </segmentedControl>
                         </subviews>
@@ -179,13 +179,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iv6-rY-3lb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137" y="2526"/>
+            <point key="canvasLocation" x="136.875" y="2525.7042253521126"/>
         </scene>
-        <!--Log-->
+        <!--Navigation Controller-->
         <scene sceneID="q1Z-Bc-hTG">
             <objects>
                 <navigationController id="Dpl-8Z-6NY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Log" id="eCB-WT-6qg"/>
+                    <tabBarItem key="tabBarItem" systemItem="history" id="eCB-WT-6qg"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kHc-Mm-AJX">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -198,7 +198,7 @@
             </objects>
             <point key="canvasLocation" x="137" y="1066"/>
         </scene>
-        <!--Item-->
+        <!--Charts View Controller-->
         <scene sceneID="rDs-lg-3lw">
             <objects>
                 <viewController id="Mi2-xc-6ol" customClass="ChartsViewController" customModule="EasyGlucose" customModuleProvider="target" sceneMemberID="viewController">
@@ -261,7 +261,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="GjZ-XC-aC0"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="SYX-CS-zH3"/>
+                    <tabBarItem key="tabBarItem" systemItem="more" id="SYX-CS-zH3"/>
                     <connections>
                         <outlet property="lineChartView" destination="N7s-3B-oOj" id="k4C-tF-Ick"/>
                     </connections>
@@ -387,8 +387,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="Dpl-8Z-6NY" kind="relationship" relationship="viewControllers" id="Z3U-2h-k02"/>
-                        <segue destination="Mas-fa-tgo" kind="relationship" relationship="viewControllers" id="s1E-Ol-Y7V"/>
                         <segue destination="Mi2-xc-6ol" kind="relationship" relationship="viewControllers" id="BJI-Zl-eLm"/>
+                        <segue destination="Mas-fa-tgo" kind="relationship" relationship="viewControllers" id="s1E-Ol-Y7V"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oDf-OV-Rub" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -401,7 +401,7 @@
         <image name="speakers-empty" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Z19-de-kO1"/>
+        <segue reference="UHB-in-aEE"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.29606428951520947" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

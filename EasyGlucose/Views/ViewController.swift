@@ -14,8 +14,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-     //   let realm = try! Realm()
-     //   print(realm.objects(Log.self))
+
     }
 
     override func didReceiveMemoryWarning() {
