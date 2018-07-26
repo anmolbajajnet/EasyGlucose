@@ -12,7 +12,8 @@ class LogDetailViewController: UIViewController {
 
     @IBOutlet weak var glucoseDisplay: UILabel!
 
-
+    @IBOutlet weak var imageDisplay: UIImageView!
+    
     @IBOutlet weak var rangeDisplay: UILabel!
     
     override func viewDidLoad() {
@@ -31,8 +32,23 @@ class LogDetailViewController: UIViewController {
             rangeDisplay.text = "You are not within range. :("
         }
         
-        
-        
+        //loading image if the log has image included
+        if mainInstance.hasPicture{
+            let imageURL = mainInstance.imageURL
+            if let image = UIImage(contentsOfFile:imageURL)
+            {
+                imageDisplay.image = image
+            }
+            else
+            {
+                print(imageURL)
+                print("ERROR LOAGIND FROM URL")
+                //Error message
+            }
+        }else{
+            imageDisplay = nil
+        }
+
         
         
         // Do any additional setup after loading the view.

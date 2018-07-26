@@ -165,6 +165,19 @@
                                     <segment title="After Meal"/>
                                 </segments>
                             </segmentedControl>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9B8-sp-uOw">
+                                <rect key="frame" x="40" y="262" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.86618521950000005" blue="0.93306530050000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zlx-Xs-hg4">
+                                <rect key="frame" x="101" y="427" width="119" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Choose an image"/>
+                                <connections>
+                                    <action selector="importImage:" destination="sSJ-KF-KwE" eventType="touchUpInside" id="cow-O9-OdG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="vIP-lC-4ck"/>
@@ -173,6 +186,7 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="glucoseTextField" destination="lsH-7V-ZMu" id="bx8-hv-3vw"/>
+                        <outlet property="imageView" destination="9B8-sp-uOw" id="z31-IJ-w83"/>
                         <outlet property="mealTimeToggle" destination="XIj-mR-w1m" id="ruN-OV-7l4"/>
                         <outlet property="moodTextField" destination="j6k-sV-oPI" id="Ng5-tR-XZO"/>
                     </connections>
@@ -293,18 +307,24 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d7f-Sk-sGd">
-                                <rect key="frame" x="35" y="166" width="250" height="283"/>
+                                <rect key="frame" x="35" y="166" width="250" height="88"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aEB-9L-qHW">
+                                <rect key="frame" x="40" y="313" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.86618521950000005" blue="0.93306530050000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="CLq-uQ-SAg"/>
                     </view>
                     <connections>
                         <outlet property="glucoseDisplay" destination="wrF-bH-QxR" id="LXg-FP-axS"/>
+                        <outlet property="imageDisplay" destination="aEB-9L-qHW" id="THT-MG-ZsS"/>
                         <outlet property="rangeDisplay" destination="d7f-Sk-sGd" id="2d5-O3-fox"/>
                     </connections>
                 </viewController>

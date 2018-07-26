@@ -10,8 +10,13 @@ import Foundation
 
 class Main {
     var glucose:Int
+    var imageURL:String
+    var hasPicture:Bool
     init(glucose:Int) {
         self.glucose = glucose
+        self.imageURL = ""
+        self.hasPicture = false
+        
        
     }
 }

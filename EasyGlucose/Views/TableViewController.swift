@@ -87,6 +87,8 @@ class TableViewController: UITableViewController {
             let selectedLog = logArray[selectedLogIndexPath.row]
             let logVC = segue.destination as! LogDetailViewController
             mainInstance.glucose = selectedLog.measurement
+            mainInstance.imageURL = selectedLog.imageURL
+            mainInstance.hasPicture = selectedLog.hasPicture
         
         }
         

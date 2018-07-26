@@ -9,7 +9,44 @@
 import UIKit
 import RealmSwift
 
-class ComposeViewController: UIViewController {
+class ComposeViewController: UIViewController,UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+
+    
+    //##### CODE FOR IMAGE SAVING / LOADING
+    var logIncludeImage = false
+    var imageURLToBeSaved:NSURL = NSURL()
+    
+    @IBOutlet weak var imageView: UIImageView!
+    @IBAction func importImage(_ sender: Any) {
+        let image = UIImagePickerController()
+        image.delegate = self
+        image.sourceType = UIImagePickerControllerSourceType.photoLibrary
+        image.allowsEditing = false
+        self.present(image, animated: true)
+        {
+            //After it is complete
+        }
+
+    }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any])
+    {
+        // the URL and boolean below will be used to save image URL
+        imageURLToBeSaved = info[UIImagePickerControllerImageURL] as! NSURL
+        logIncludeImage = true
+        let imageURLInString = imageURLToBeSaved.path
+        if let image = UIImage(contentsOfFile:imageURLInString!)
+            //        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        {
+            imageView.image = image
+        }
+        else
+        {
+            print("ERROR LOAGIND FROM URL")
+        }
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    //##### END CODE FOR IMAGE SAVING / LOADING
 
     @IBAction func close() {
         dismiss(animated: true, completion: nil)
@@ -32,7 +69,15 @@ class ComposeViewController: UIViewController {
         // maybe change the input method from storyboard
         logToBeSaved.measurement = Int(myGlucose)!
         logToBeSaved.note = moodTextField.text!
-        // add input methods for other fields here
+        
+        // saving image related info
+        if logIncludeImage{
+            logToBeSaved.imageURL = imageURLToBeSaved.path!
+            logToBeSaved.hasPicture = true
+            logIncludeImage = false
+        }else{
+            logToBeSaved.hasPicture = false
+        }
         
         // TODO: "isEnabled" is not the right boolean for state of toggle, fix this
         if mealTimeToggle.isEnabled{
@@ -40,12 +85,7 @@ class ComposeViewController: UIViewController {
         }else{
             logToBeSaved.timeInRelationToMeal = "After meal"
         }
-        print("printing info from log to be saved")
-        print(logToBeSaved.measurement)
-        print(logToBeSaved.note)
-        print(logToBeSaved.timeInRelationToMeal)
         
-        // TODO: generalize this as a function taking in a Object type
         let realm = try! Realm()
         try! realm.write {
             print("Saving data")
