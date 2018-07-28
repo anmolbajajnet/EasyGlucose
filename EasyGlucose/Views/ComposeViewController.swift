@@ -80,10 +80,12 @@ class ComposeViewController: UIViewController,UINavigationControllerDelegate, UI
         }
         
         // TODO: "isEnabled" is not the right boolean for state of toggle, fix this
-        if mealTimeToggle.isEnabled{
+        if mealTimeToggle.selectedSegmentIndex == 0{
             logToBeSaved.timeInRelationToMeal = "Before meal"
+            print("saved log for before meal")
         }else{
             logToBeSaved.timeInRelationToMeal = "After meal"
+            print("saved log for after meal")
         }
         
         let realm = try! Realm()

@@ -40,6 +40,7 @@ class ChartsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBOutlet weak var mealTimeFilterOption: UISegmentedControl!
     @IBOutlet weak var lineChartView: LineChartView!
     
     func drawDefaultChart(){
@@ -94,7 +95,12 @@ class ChartsViewController: UIViewController {
             sampleLog.timestamp = Date.init(timeIntervalSinceNow: Double(i+random) * -172800)
             sampleLog.measurement = 150 + (2 * i)
             sampleLog.note = "loop entry"
-            sampleLog.timeInRelationToMeal = "After meal"
+            if i%2 == 0 {
+                sampleLog.timeInRelationToMeal = "Before meal"
+            }else{
+                sampleLog.timeInRelationToMeal = "After meal"
+            }
+            
             sampleLog.usedForTesting = true
             let realm = try! Realm()
             try! realm.write{
@@ -152,7 +158,7 @@ class ChartsViewController: UIViewController {
         }
         print("#### END OF TEST RESULTS ####")
         print("Deleting all testing data inserted into DB... ... ...")
-        deleteTestingValues()       // comment out to keep testing values
+        // deleteTestingValues()       // comment out to keep testing values
         print("Test data points deleted")
     }
     
@@ -187,18 +193,67 @@ class ChartsViewController: UIViewController {
     
     // this function will take in a list of "Log" objects and produce a line graph using "measurement" property of each object in the list for the Y axis
     func drawChartByGivenObjects(objects:[Log]){
-        var graphInputValues = [Int]()
-        for i in 0..<objects.count{
-            graphInputValues.insert(objects[i].measurement, at:0)
+        var fillCount = 0
+        if mealTimeFilterOption.selectedSegmentIndex != 2{
+            var graphInputValues = [Int]()
+            for i in 0..<objects.count{
+                if mealTimeFilterOption.selectedSegmentIndex == 0{
+                    if objects[i].timeInRelationToMeal == "Before meal"{
+                        graphInputValues.insert(objects[i].measurement, at:0)
+                        fillCount += 1
+                    }
+                }else{
+                    if objects[i].timeInRelationToMeal == "After meal"{
+                        graphInputValues.insert(objects[i].measurement, at:0)
+                        fillCount += 1
+                    }
+                }
+                
+            }
+            let values = (0..<fillCount).map {(i) -> ChartDataEntry in
+                return ChartDataEntry(x: Double(i), y: Double(graphInputValues[i]))
+            }
+            var graphLabel = ""
+            if mealTimeFilterOption.selectedSegmentIndex == 0{
+                graphLabel = "Before meal measurements"
+            }else{
+                graphLabel = "After meal measurements"
+            }
+            let set1 = LineChartDataSet(values:values, label: graphLabel)
+            
+            let beforeMealColor = UIColor.red
+            set1.setCircleColor(beforeMealColor)
+            let data = LineChartData(dataSet: set1)
+            self.lineChartView.data = data
+        }else{
+            var beforeMealValues = [Int]()
+            var afterMealValues = [Int]()
+            // categorizing data into 2 sets
+            for i in 0..<objects.count {
+                if objects[i].timeInRelationToMeal == "Before meal"{
+                    beforeMealValues.insert(objects[i].measurement, at:0)
+                }else{
+                    afterMealValues.insert(objects[i].measurement, at:0)
+                }
+            }
+            // draw chart using categorized data
+            let values = (0..<beforeMealValues.count).map {(i) -> ChartDataEntry in
+                return ChartDataEntry(x: Double(i), y: Double(beforeMealValues[i]))
+            }
+            let values2 = (0..<afterMealValues.count).map {(i) -> ChartDataEntry in
+                return ChartDataEntry(x: Double(i), y: Double(afterMealValues[i]))
+            }
+            let set1 = LineChartDataSet(values:values, label: "Before meal measurements")
+            let beforeMealColor = UIColor.red
+            set1.setCircleColor(beforeMealColor)
+            set1.setColor(beforeMealColor)
+            
+            let set2 = LineChartDataSet(values:values2, label: "After meal measurements")
+            set2.setCircleColor(UIColor.blue)
+            let data = LineChartData(dataSets: [set1, set2])
+            self.lineChartView.data = data
+            
         }
-        let values = (0..<objects.count).map {(i) -> ChartDataEntry in
-            return ChartDataEntry(x: Double(i), y: Double(graphInputValues[i]))
-        }
-        let set1 = LineChartDataSet(values:values, label: "DataSet 1")
-        let beforeMealColor = UIColor.red
-        set1.setCircleColor(beforeMealColor)
-        let data = LineChartData(dataSet: set1)
-        self.lineChartView.data = data
         
     }
     

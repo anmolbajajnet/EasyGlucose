@@ -221,7 +221,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N7s-3B-oOj" customClass="LineChartView" customModule="Charts">
-                                <rect key="frame" x="16" y="134" width="288" height="343"/>
+                                <rect key="frame" x="16" y="155" width="288" height="343"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.86618521953327265" blue="0.93306530051197678" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
@@ -271,6 +271,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Sxp-ih-mVL">
+                                <rect key="frame" x="111" y="108" width="193" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Before"/>
+                                    <segment title="After"/>
+                                    <segment title="Both"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Meal time filter:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BcI-Mt-fKm">
+                                <rect key="frame" x="16" y="112" width="101" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="GjZ-XC-aC0"/>
@@ -278,6 +294,7 @@
                     <tabBarItem key="tabBarItem" systemItem="more" id="SYX-CS-zH3"/>
                     <connections>
                         <outlet property="lineChartView" destination="N7s-3B-oOj" id="k4C-tF-Ick"/>
+                        <outlet property="mealTimeFilterOption" destination="Sxp-ih-mVL" id="Ane-Y3-6Ac"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J5k-cC-j09" userLabel="First Responder" sceneMemberID="firstResponder"/>
