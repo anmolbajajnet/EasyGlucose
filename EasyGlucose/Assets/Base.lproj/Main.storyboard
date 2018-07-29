@@ -369,7 +369,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k46-1a-l2n">
-                                <rect key="frame" x="249" y="208" width="31" height="21"/>
+                                <rect key="frame" x="237" y="208" width="55" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -408,10 +408,13 @@
                         <viewLayoutGuide key="safeArea" id="y89-se-roT"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="speakers-empty" selectedImage="speakers-empty" id="bor-iJ-V5H"/>
+                    <connections>
+                        <outlet property="avgLabel" destination="k46-1a-l2n" id="ew7-i2-t9j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mO6-2Q-QO7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2604" y="995"/>
+            <point key="canvasLocation" x="2602.5" y="994.0140845070423"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="JUX-Y2-2EX">

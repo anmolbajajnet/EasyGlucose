@@ -12,10 +12,12 @@ class Main {
     var glucose:Int
     var imageURL:String
     var hasPicture:Bool
+    var logArrayCount:Int
     init(glucose:Int) {
         self.glucose = glucose
         self.imageURL = ""
         self.hasPicture = false
+        self.logArrayCount = 0
         
        
     }

@@ -12,11 +12,14 @@ import RealmSwift
 class ProfileViewController: UIViewController {
 
 
+    @IBOutlet weak var avgLabel: UILabel!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
+        avgCalculation()
         
         // Do any additional setup after loading the view.
     }
@@ -26,7 +29,13 @@ class ProfileViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func avgCalculation() {
+        let realm = try! Realm()
+        let allTime: Int = realm.objects(Log.self).sum(ofProperty: "measurement")
+        let mean = allTime/mainInstance.logArrayCount
+        avgLabel.text = String(mean)
+    }
+    
 
 
 
