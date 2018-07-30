@@ -740,7 +740,6 @@
         <image name="speakers-empty" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2Nf-gZ-slD"/>
         <segue reference="kRB-s0-a3Q"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.29606428951520947" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

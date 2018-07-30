@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/CEO/Desktop/EasyGlucose/EasyGlucose/Views/EditProfileViewController.swift">
-   </FileRef>
-   <FileRef
       location = "group:EasyGlucose.xcodeproj">
    </FileRef>
    <FileRef

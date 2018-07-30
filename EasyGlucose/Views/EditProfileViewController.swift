@@ -1,6 +1,6 @@
 //
 //  EditProfileViewController.swift
-//  
+//
 //
 //  Created by Anmol Bajaj on 2018-07-30.
 //
@@ -20,7 +20,7 @@ class EditProfileViewController: UIViewController {
         deletePreviousProfile()
         // saving profile
         let profileToBeSaved = Profile()
-
+        
         if diabetesType.selectedSegmentIndex == 0{
             profileToBeSaved.diabetesType = "Type 1"
         }else if diabetesType.selectedSegmentIndex == 1{
@@ -56,13 +56,13 @@ class EditProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
 }
