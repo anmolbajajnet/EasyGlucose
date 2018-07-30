@@ -438,6 +438,10 @@
                                 <rect key="frame" x="-55" y="-55" width="432" height="633"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profile (1)" translatesAutoresizingMaskIntoConstraints="NO" id="rcD-Xe-mXW">
+                                <rect key="frame" x="74" y="68" width="178" height="169"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Avg. Glucose" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZ8-1U-Nex">
                                 <rect key="frame" x="16" y="234" width="100" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -466,8 +470,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User Name Here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AU3-rv-wAk">
-                                <rect key="frame" x="94" y="37" width="134" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello, " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AU3-rv-wAk">
+                                <rect key="frame" x="101" y="37" width="51" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="😀" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhU-e5-yUR">
+                                <rect key="frame" x="207" y="37" width="22" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -526,10 +537,6 @@
                                     <segue destination="2uR-15-gDK" kind="show" id="2Nf-gZ-slD"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profile (1)" translatesAutoresizingMaskIntoConstraints="NO" id="rcD-Xe-mXW">
-                                <rect key="frame" x="74" y="68" width="178" height="169"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Health P email here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nPG-xx-Rax">
                                 <rect key="frame" x="85" y="465" width="149" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -558,13 +565,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="daE-TP-01J">
+                                <rect key="frame" x="155" y="37" width="48" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="y89-se-roT"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="speakers-empty" selectedImage="speakers-empty" id="bor-iJ-V5H"/>
                     <connections>
+                        <outlet property="avgBP" destination="k94-1R-q3S" id="Ny6-HM-2cc"/>
+                        <outlet property="avgCarbs" destination="xAu-2o-NTI" id="S4Y-Lg-6OJ"/>
                         <outlet property="avgLabel" destination="k46-1a-l2n" id="ew7-i2-t9j"/>
+                        <outlet property="emailDisplay" destination="YdE-oQ-3Mx" id="3U0-xG-xIy"/>
+                        <outlet property="healthEmailDisplay" destination="nPG-xx-Rax" id="3Gu-qM-gks"/>
+                        <outlet property="nameDisplay" destination="Xyy-qb-EtB" id="cJ0-EP-9Wh"/>
+                        <outlet property="nameTopDisplay" destination="daE-TP-01J" id="vdJ-uE-7aN"/>
+                        <outlet property="typeDisplay" destination="JhK-pI-5gA" id="UBL-g3-IeN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mO6-2Q-QO7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -591,6 +612,7 @@
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="saveProfile:" destination="2uR-15-gDK" eventType="touchUpInside" id="C4D-St-fqu"/>
                                     <segue destination="RTE-ai-Pl7" kind="show" id="wYZ-Dp-dMY"/>
                                 </connections>
                             </button>
@@ -674,6 +696,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ESY-Ld-lPe"/>
                     </view>
+                    <connections>
+                        <outlet property="diabetesType" destination="fIe-XV-FaA" id="cOa-di-QfE"/>
+                        <outlet property="practitionerEmail" destination="Fvi-se-XIT" id="1Z6-pT-fLC"/>
+                        <outlet property="userEmail" destination="20E-QO-RSa" id="boV-S4-poH"/>
+                        <outlet property="userName" destination="H3f-hO-THr" id="zx6-jm-8Kb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eRj-qo-gHc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -712,7 +740,8 @@
         <image name="speakers-empty" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="UHB-in-aEE"/>
+        <segue reference="2Nf-gZ-slD"/>
+        <segue reference="kRB-s0-a3Q"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.29606428951520947" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
