@@ -90,6 +90,7 @@ class TableViewController: UITableViewController {
             mainInstance.glucose = selectedLog.measurement
             mainInstance.imageURL = selectedLog.imageURL
             mainInstance.hasPicture = selectedLog.hasPicture
+            mainInstance.logDate =  selectedLog.timestamp
         
         }
         
