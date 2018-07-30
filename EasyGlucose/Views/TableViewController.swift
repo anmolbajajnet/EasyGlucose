@@ -91,6 +91,7 @@ class TableViewController: UITableViewController {
             mainInstance.imageURL = selectedLog.imageURL
             mainInstance.hasPicture = selectedLog.hasPicture
             mainInstance.logDate =  selectedLog.timestamp
+            mainInstance.carbMeasure = selectedLog.carbMeasurement
         
         }
         

@@ -20,12 +20,16 @@ class LogDetailViewController: UIViewController {
     
     @IBOutlet weak var dateDisplay: UILabel!
     
+    @IBOutlet weak var carbDisplay: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
           navigationItem.largeTitleDisplayMode = .never
         
         glucoseDisplay.text = String(mainInstance.glucose)
+        carbDisplay.text = String(mainInstance.carbMeasure)
+        
     
         let formatter = DateFormatter()
         formatter.dateStyle = .long

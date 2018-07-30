@@ -14,12 +14,16 @@ class Main {
     var hasPicture:Bool
     var logArrayCount:Int
     var logDate:Date
+    var carbMeasure:String
+    var bloodPressureMeasure:String
     init(glucose:Int) {
         self.glucose = glucose
         self.imageURL = ""
         self.hasPicture = false
         self.logArrayCount = 0
         self.logDate = Date()
+        self.carbMeasure = ""
+        self.bloodPressureMeasure = ""
         
        
     }

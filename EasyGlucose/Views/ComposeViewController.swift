@@ -54,6 +54,8 @@ class ComposeViewController: UIViewController,UINavigationControllerDelegate, UI
     
     @IBOutlet weak var glucoseTextField: UITextField!
     @IBOutlet weak var moodTextField: UITextField!
+    @IBOutlet weak var carbTextField: UITextField!
+    @IBOutlet weak var bloodPressureTextField: UITextField!
     
     
     @IBOutlet weak var mealTimeToggle: UISegmentedControl!
@@ -64,36 +66,51 @@ class ComposeViewController: UIViewController,UINavigationControllerDelegate, UI
         // I skipped this so i can get things working first - Tony L.
         
         let myGlucose = glucoseTextField.text!
-        let logToBeSaved = Log()
-        // need to check for edge cases
-        // maybe change the input method from storyboard
-        logToBeSaved.measurement = Int(myGlucose)!
-        logToBeSaved.note = moodTextField.text!
         
-        // saving image related info
-        if logIncludeImage{
-            logToBeSaved.imageURL = imageURLToBeSaved.path!
-            logToBeSaved.hasPicture = true
-            logIncludeImage = false
+        if Int(myGlucose) != nil {
+            let logToBeSaved = Log()
+            // need to check for edge cases
+            // maybe change the input method from storyboard
+            logToBeSaved.measurement = Int(myGlucose)!
+            if moodTextField.text != nil{
+                logToBeSaved.note = moodTextField.text!
+            }
+            if bloodPressureTextField.text != nil {
+                logToBeSaved.bloodPressureMeasurement = bloodPressureTextField.text!
+            }
+            if carbTextField.text != nil{
+                logToBeSaved.carbMeasurement = carbTextField.text!
+            }
+            
+            
+            // saving image related info
+            if logIncludeImage{
+                logToBeSaved.imageURL = imageURLToBeSaved.path!
+                logToBeSaved.hasPicture = true
+                logIncludeImage = false
+            }else{
+                logToBeSaved.hasPicture = false
+            }
+            
+            // TODO: "isEnabled" is not the right boolean for state of toggle, fix this
+            if mealTimeToggle.selectedSegmentIndex == 0{
+                logToBeSaved.timeInRelationToMeal = "Before meal"
+                print("saved log for before meal")
+            }else{
+                logToBeSaved.timeInRelationToMeal = "After meal"
+                print("saved log for after meal")
+            }
+            
+            
+            let realm = try! Realm()
+            try! realm.write {
+                print("Saving data")
+                realm.add(logToBeSaved)
+            }
         }else{
-            logToBeSaved.hasPicture = false
+            emptyGlucoseAlert()
         }
-        
-        // TODO: "isEnabled" is not the right boolean for state of toggle, fix this
-        if mealTimeToggle.selectedSegmentIndex == 0{
-            logToBeSaved.timeInRelationToMeal = "Before meal"
-            print("saved log for before meal")
-        }else{
-            logToBeSaved.timeInRelationToMeal = "After meal"
-            print("saved log for after meal")
-        }
-        
 
-        let realm = try! Realm()
-        try! realm.write {
-            print("Saving data")
-            realm.add(logToBeSaved)
-        }
     }
     
         

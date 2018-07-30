@@ -33,7 +33,8 @@ class Log: Object {
     @objc dynamic var usedForTesting = false
     @objc dynamic var imageURL = ""
     @objc dynamic var hasPicture = false
-    
+    @objc dynamic var carbMeasurement = ""
+    @objc dynamic var bloodPressureMeasurement = ""
     
     
     // setting up the primary key

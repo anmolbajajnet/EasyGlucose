@@ -29,7 +29,8 @@ class ChartsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        drawDefaultChart()
+       drawDefaultChart()
+    
         
         // Do any additional setup after loading the view.
     }

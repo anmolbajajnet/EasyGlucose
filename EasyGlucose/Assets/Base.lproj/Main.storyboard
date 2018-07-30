@@ -180,7 +180,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Carbs:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8c0-Rp-ze2">
                                 <rect key="frame" x="24" y="326" width="51" height="21"/>
@@ -214,6 +214,8 @@
                     <toolbarItems/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="bloodPressureTextField" destination="eHO-8Q-Sgl" id="h0o-Zj-9E9"/>
+                        <outlet property="carbTextField" destination="FWs-EQ-p3W" id="a4J-Jy-hau"/>
                         <outlet property="glucoseTextField" destination="lsH-7V-ZMu" id="bx8-hv-3vw"/>
                         <outlet property="imageView" destination="9B8-sp-uOw" id="z31-IJ-w83"/>
                         <outlet property="mealTimeToggle" destination="XIj-mR-w1m" id="ruN-OV-7l4"/>
@@ -412,6 +414,7 @@
                         <viewLayoutGuide key="safeArea" id="CLq-uQ-SAg"/>
                     </view>
                     <connections>
+                        <outlet property="carbDisplay" destination="hOk-dO-ZKs" id="jGf-IO-gpA"/>
                         <outlet property="dateDisplay" destination="Scw-IX-S2w" id="rOc-2D-hmj"/>
                         <outlet property="glucoseDisplay" destination="wrF-bH-QxR" id="LXg-FP-axS"/>
                         <outlet property="imageDisplay" destination="aEB-9L-qHW" id="THT-MG-ZsS"/>
@@ -709,7 +712,7 @@
         <image name="speakers-empty" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="wYZ-Dp-dMY"/>
+        <segue reference="UHB-in-aEE"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.29606428951520947" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
