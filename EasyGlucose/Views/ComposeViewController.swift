@@ -88,6 +88,7 @@ class ComposeViewController: UIViewController,UINavigationControllerDelegate, UI
             print("saved log for after meal")
         }
         
+
         let realm = try! Realm()
         try! realm.write {
             print("Saving data")
