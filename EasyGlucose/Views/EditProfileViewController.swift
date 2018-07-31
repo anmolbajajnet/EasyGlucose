@@ -15,6 +15,15 @@ class EditProfileViewController: UIViewController {
     @IBOutlet weak var userEmail: UITextField!
     @IBOutlet weak var practitionerEmail: UITextField!
     
+    
+    @IBOutlet weak var editLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var typeLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var healthLabel: UILabel!
+    @IBOutlet weak var saveLabel: UIButton!
+    
+    
     @IBAction func saveProfile(_ sender: Any) {
         // delete previous profile
         deletePreviousProfile()
@@ -58,6 +67,22 @@ class EditProfileViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        
+        changeLang()
+        
+        
+        
+    }
+    //A function that changes the language from the default english to simplified chinese
+    func changeLang(){
+        if (mainInstance.engLang) == false {
+        editLabel.text = "编辑资料"
+        nameLabel.text = "姓名"
+        typeLabel.text = "糖尿病类型"
+        emailLabel.text = "你的邮箱"
+        healthLabel.text = "医生邮箱"
+        saveLabel.setTitle("保存资料", for: .normal)
+        }
     }
     
     override func didReceiveMemoryWarning() {

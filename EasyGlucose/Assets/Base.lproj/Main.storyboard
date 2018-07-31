@@ -47,6 +47,14 @@
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbr-DU-8eJ">
+                                <rect key="frame" x="27" y="417" width="56" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Chinese"/>
+                                <connections>
+                                    <action selector="langButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Msi-7h-S3J"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -168,13 +176,6 @@
                                     <action selector="importImage:" destination="sSJ-KF-KwE" eventType="touchUpInside" id="cow-O9-OdG"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add notes:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5y-9p-Fsb">
-                                <rect key="frame" x="24" y="273" width="83" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FWs-EQ-p3W">
                                 <rect key="frame" x="152" y="321" width="145" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -207,6 +208,13 @@
                                 <rect key="frame" x="24" y="415" width="281" height="89"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add notes:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5y-9p-Fsb">
+                                <rect key="frame" x="24" y="256" width="83" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="vIP-lC-4ck"/>
@@ -214,12 +222,19 @@
                     <toolbarItems/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="backLabel" destination="FZj-rD-YDy" id="qNX-kF-Ayr"/>
+                        <outlet property="bloodLabel" destination="msO-Hc-IcP" id="VxY-A9-Cax"/>
                         <outlet property="bloodPressureTextField" destination="eHO-8Q-Sgl" id="h0o-Zj-9E9"/>
                         <outlet property="carbTextField" destination="FWs-EQ-p3W" id="a4J-Jy-hau"/>
+                        <outlet property="carbsLabel" destination="8c0-Rp-ze2" id="Ud3-Ta-ZVd"/>
+                        <outlet property="glucoseLabel" destination="tq7-ae-PoY" id="rwW-3v-fcx"/>
                         <outlet property="glucoseTextField" destination="lsH-7V-ZMu" id="bx8-hv-3vw"/>
+                        <outlet property="imageLabel" destination="zlx-Xs-hg4" id="NbJ-V9-RNb"/>
                         <outlet property="imageView" destination="9B8-sp-uOw" id="z31-IJ-w83"/>
+                        <outlet property="logLabel" destination="3O8-5d-A55" id="xwQ-37-neQ"/>
                         <outlet property="mealTimeToggle" destination="XIj-mR-w1m" id="ruN-OV-7l4"/>
                         <outlet property="moodTextField" destination="j6k-sV-oPI" id="Ng5-tR-XZO"/>
+                        <outlet property="notesLabel" destination="x5y-9p-Fsb" id="Kk4-Kl-D0k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iv6-rY-3lb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -331,8 +346,15 @@
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-9"/>
                     </tabBarItem>
                     <connections>
+                        <outlet property="allLabel" destination="xKN-vf-aba" id="78E-XE-Xhg"/>
+                        <outlet property="bloodLabel" destination="3tx-GT-xNl" id="PHC-i2-hGf"/>
                         <outlet property="lineChartView" destination="N7s-3B-oOj" id="k4C-tF-Ick"/>
+                        <outlet property="mealLabel" destination="BcI-Mt-fKm" id="3c7-zr-YER"/>
                         <outlet property="mealTimeFilterOption" destination="Sxp-ih-mVL" id="Ane-Y3-6Ac"/>
+                        <outlet property="ninetyLabel" destination="POP-NN-B4c" id="teX-Xy-3M9"/>
+                        <outlet property="sevenLabel" destination="1g0-fn-yal" id="M0v-dz-umj"/>
+                        <outlet property="showLabel" destination="6x8-KJ-7Fk" id="5gr-K5-RZD"/>
+                        <outlet property="thirtyLabel" destination="4Cn-yc-m3N" id="ubc-n5-a5b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J5k-cC-j09" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -415,9 +437,12 @@
                     </view>
                     <connections>
                         <outlet property="carbDisplay" destination="hOk-dO-ZKs" id="jGf-IO-gpA"/>
+                        <outlet property="carbsLabel" destination="Jan-jM-3jZ" id="lux-lz-ehd"/>
                         <outlet property="dateDisplay" destination="Scw-IX-S2w" id="rOc-2D-hmj"/>
                         <outlet property="glucoseDisplay" destination="wrF-bH-QxR" id="LXg-FP-axS"/>
+                        <outlet property="glucoseLabel" destination="mmt-b4-2FS" id="o6i-kL-MyW"/>
                         <outlet property="imageDisplay" destination="aEB-9L-qHW" id="THT-MG-ZsS"/>
+                        <outlet property="loggedLabel" destination="0DJ-1K-s6B" id="OmC-P8-4uJ"/>
                         <outlet property="rangeDisplay" destination="d7f-Sk-sGd" id="2d5-O3-fox"/>
                         <outlet property="rangeImageDisplay" destination="lKe-gE-6j4" id="x5T-S2-U0G"/>
                     </connections>
@@ -512,13 +537,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pnt-4E-0Sv">
-                                <rect key="frame" x="24" y="300" width="50" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Type X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JhK-pI-5gA">
                                 <rect key="frame" x="223" y="343" width="53" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -572,6 +590,13 @@
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pnt-4E-0Sv">
+                                <rect key="frame" x="22" y="292" width="50" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="y89-se-roT"/>
@@ -581,11 +606,19 @@
                         <outlet property="avgBP" destination="k94-1R-q3S" id="Ny6-HM-2cc"/>
                         <outlet property="avgCarbs" destination="xAu-2o-NTI" id="S4Y-Lg-6OJ"/>
                         <outlet property="avgLabel" destination="k46-1a-l2n" id="ew7-i2-t9j"/>
+                        <outlet property="bloodLabel" destination="39n-Sp-3C4" id="Kbr-J1-jSi"/>
+                        <outlet property="carbsLabel" destination="tVf-hJ-ieA" id="JdD-yk-XAj"/>
                         <outlet property="emailDisplay" destination="YdE-oQ-3Mx" id="3U0-xG-xIy"/>
+                        <outlet property="emailLabel" destination="GbE-Ce-QrX" id="R8V-0c-aV4"/>
+                        <outlet property="glucoseLabel" destination="zZ8-1U-Nex" id="HEI-N4-k5z"/>
                         <outlet property="healthEmailDisplay" destination="nPG-xx-Rax" id="3Gu-qM-gks"/>
+                        <outlet property="healthEmailLabel" destination="7Es-aJ-Duu" id="Lad-eE-9Q5"/>
+                        <outlet property="helloLabel" destination="AU3-rv-wAk" id="62q-wS-ewp"/>
                         <outlet property="nameDisplay" destination="Xyy-qb-EtB" id="cJ0-EP-9Wh"/>
+                        <outlet property="nameLabel" destination="pnt-4E-0Sv" id="oR7-r9-N33"/>
                         <outlet property="nameTopDisplay" destination="daE-TP-01J" id="vdJ-uE-7aN"/>
                         <outlet property="typeDisplay" destination="JhK-pI-5gA" id="UBL-g3-IeN"/>
+                        <outlet property="typeLabel" destination="bP8-Xe-AKu" id="ZCc-2m-xFv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mO6-2Q-QO7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -698,7 +731,13 @@
                     </view>
                     <connections>
                         <outlet property="diabetesType" destination="fIe-XV-FaA" id="cOa-di-QfE"/>
+                        <outlet property="editLabel" destination="yrK-v0-go5" id="N91-G7-DwQ"/>
+                        <outlet property="emailLabel" destination="ae2-Z3-6ju" id="XPs-Ts-JqS"/>
+                        <outlet property="healthLabel" destination="NvF-cC-4rS" id="V4K-cf-o2s"/>
+                        <outlet property="nameLabel" destination="ngq-Db-iAt" id="M3G-Pg-yMV"/>
                         <outlet property="practitionerEmail" destination="Fvi-se-XIT" id="1Z6-pT-fLC"/>
+                        <outlet property="saveLabel" destination="BjG-BL-weo" id="cRF-Q8-mAT"/>
+                        <outlet property="typeLabel" destination="G1s-5H-qTH" id="bIz-9o-GJT"/>
                         <outlet property="userEmail" destination="20E-QO-RSa" id="boV-S4-poH"/>
                         <outlet property="userName" destination="H3f-hO-THr" id="zx6-jm-8Kb"/>
                     </connections>
@@ -740,7 +779,7 @@
         <image name="speakers-empty" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="kRB-s0-a3Q"/>
+        <segue reference="UHB-in-aEE"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.29606428951520947" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

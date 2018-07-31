@@ -11,6 +11,11 @@ import RealmSwift
 
 class ViewController: UIViewController {
 
+    //This button sets the language of the app to Simplified Chinese (not English)
+    @IBAction func langButton(_ sender: UIButton) {
+        mainInstance.engLang = false
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

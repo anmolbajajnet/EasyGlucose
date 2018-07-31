@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+//This is a global class where global variables are stored the class gets called using mainInstance
 class Main {
     var glucose:Int
     var imageURL:String
@@ -16,6 +16,7 @@ class Main {
     var logDate:Date
     var carbMeasure:String
     var bloodPressureMeasure:String
+    var engLang:Bool
     init(glucose:Int) {
         self.glucose = glucose
         self.imageURL = ""
@@ -24,6 +25,7 @@ class Main {
         self.logDate = Date()
         self.carbMeasure = ""
         self.bloodPressureMeasure = ""
+        self.engLang = true
         
        
     }

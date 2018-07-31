@@ -25,17 +25,37 @@ import Charts
 import RealmSwift
 class ChartsViewController: UIViewController {
 
+    @IBOutlet weak var bloodLabel: UILabel!
+    @IBOutlet weak var mealLabel: UILabel!
+    @IBOutlet weak var showLabel: UILabel!
+    @IBOutlet weak var sevenLabel: UIButton!
+    @IBOutlet weak var thirtyLabel: UIButton!
+    @IBOutlet weak var ninetyLabel: UIButton!
+    @IBOutlet weak var allLabel: UIButton!
+    
     // draw the default graph for data gathered in last 7 days upon loading
     override func viewDidLoad() {
         super.viewDidLoad()
-        
        drawDefaultChart()
-    
-        
         // Do any additional setup after loading the view.
+        
+        changeLang()
+        
     }
 
-    
+    //A function that changes the language from the default english to simplified chinese
+    func changeLang(){
+        if (mainInstance.engLang) == false {
+            bloodLabel.text = "血糖图像"
+            mealLabel.text = "用餐时间"
+            showLabel.text = "显示"
+            sevenLabel.setTitle("7天", for: .normal)
+            thirtyLabel.setTitle("30天", for: .normal)
+            ninetyLabel.setTitle("90天", for: .normal)
+            allLabel.setTitle("全部", for: .normal)
+            
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -44,23 +64,27 @@ class ChartsViewController: UIViewController {
     @IBOutlet weak var mealTimeFilterOption: UISegmentedControl!
     @IBOutlet weak var lineChartView: LineChartView!
     
+    //Display the default chart
     func drawDefaultChart(){
         let filteredData = grabDataForXDays(dayCount: 7)
         let sortedData = sortGrabbedData(grabbedData: filteredData)
         drawChartByGivenObjects(objects: sortedData)
     }
     
+    //display the inputs for the last 7 days on the graph
     @IBAction func graphDataFor7Days(_ sender: UIButton) {
         let filteredData = grabDataForXDays(dayCount: 7)
         let sortedData = sortGrabbedData(grabbedData: filteredData)
         drawChartByGivenObjects(objects: sortedData)
         // test for null?
     }
+    //display the inputs for the last 30 days on the graph
     @IBAction func graphDataFor30Days(_ sender: UIButton) {
         let filteredData = grabDataForXDays(dayCount: 30)
         let sortedData = sortGrabbedData(grabbedData: filteredData)
         drawChartByGivenObjects(objects: sortedData)
     }
+    //display the inputs for the last 90 days on the graph
     @IBAction func graphDataFor90Days(_ sender: UIButton) {
         let filteredData = grabDataForXDays(dayCount: 90)
         let sortedData = sortGrabbedData(grabbedData: filteredData)

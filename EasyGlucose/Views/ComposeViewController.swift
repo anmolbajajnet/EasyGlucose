@@ -10,7 +10,21 @@ import UIKit
 import RealmSwift
 
 class ComposeViewController: UIViewController,UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-
+    
+    @IBOutlet weak var glucoseLabel: UILabel!
+    
+    @IBOutlet weak var imageLabel: UIButton!
+    
+    @IBOutlet weak var notesLabel: UILabel!
+    
+    @IBOutlet weak var carbsLabel: UILabel!
+    
+    @IBOutlet weak var bloodLabel: UILabel!
+    
+    @IBOutlet weak var logLabel: UIButton!
+    
+    @IBOutlet weak var backLabel: UIButton!
+    
     
     //##### CODE FOR IMAGE SAVING / LOADING
     var logIncludeImage = false
@@ -117,7 +131,7 @@ class ComposeViewController: UIViewController,UINavigationControllerDelegate, UI
 
 
     
-    // ignore this for now
+    // This funciton gets called and shows an alert when the glucose input is empty
     func emptyGlucoseAlert() {
         let alert = UIAlertController(title: "Made a mistake?", message: "Your glucose was left empty. Please enter your reading! :)", preferredStyle: .alert)
         let action = UIAlertAction(title: "Log again", style: .default, handler: nil)
@@ -128,10 +142,25 @@ class ComposeViewController: UIViewController,UINavigationControllerDelegate, UI
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
+        changeLang()
         
     }
 
+    //A functoin that changes the language from the default English to simplified chinese
+    func changeLang(){
+        if (mainInstance.engLang) == false {
+            glucoseLabel.text = "血糖"
+            imageLabel.setTitle("添加图片", for: .normal)
+            notesLabel.text = "添加备注"
+            carbsLabel.text = "碳水"
+            bloodLabel.text = "血压"
+            logLabel.setTitle("记录", for: .normal)
+            backLabel.setTitle("返回", for: .normal)
+            
+        }
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

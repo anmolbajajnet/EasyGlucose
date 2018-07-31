@@ -10,6 +10,7 @@ import UIKit
 
 class TableViewController: UITableViewController {
     
+    //Initialize a log array to store all the glucose values
     var logArray = [Log]()
 
 
@@ -21,6 +22,7 @@ class TableViewController: UITableViewController {
 
     }
     
+    //A function that puts all the glucose values into an array
     func loadData() {
         if let logs = LogsManager.shared.getLogs() {
             logArray = logs
@@ -49,7 +51,7 @@ class TableViewController: UITableViewController {
         return logArray.count
     }
 
-    
+    //A function that displays the log values into each cell
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
@@ -71,6 +73,7 @@ class TableViewController: UITableViewController {
 
     
     // Override to support editing the table view.
+    //Allows the user to delete the glucose value after swiping it right
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         // Delete the row from the data source
         if editingStyle == .delete {
@@ -82,6 +85,7 @@ class TableViewController: UITableViewController {
     }
     
 
+    //A function that saves the user intputs into the mainInstance class
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if let selectedLogIndexPath = self.tableView.indexPathForSelectedRow {

@@ -17,6 +17,8 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var avgBP: UILabel!
     
     
+    
+    
     @IBOutlet weak var nameDisplay: UILabel!
     @IBOutlet weak var emailDisplay: UILabel!
     @IBOutlet weak var typeDisplay: UILabel!
@@ -25,12 +27,37 @@ class ProfileViewController: UIViewController {
     
     
     
+    @IBOutlet weak var helloLabel: UILabel!
+    @IBOutlet weak var glucoseLabel: UILabel!
+    @IBOutlet weak var carbsLabel: UILabel!
+    @IBOutlet weak var bloodLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var typeLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var healthEmailLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         fillProfile()
         avgCalculation()
+        changeLang()
     }
     
+    //a Function that changes the language from the default english to simpified chinese
+    func changeLang(){
+        if (mainInstance.engLang == false) {
+            helloLabel.text = "你好"
+            glucoseLabel.text = "平均血糖"
+            carbsLabel.text = "平均碳水"
+            bloodLabel.text = "平均血压"
+            nameLabel.text = "姓名"
+            typeLabel.text = "糖尿病类型"
+            emailLabel.text = "你的邮箱"
+            healthEmailLabel.text = "医生邮箱"
+        }
+    }
+    
+    //Refresh the average calculation everytime the page is loaded
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         avgCalculation()
@@ -40,7 +67,8 @@ class ProfileViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-        
+    
+    //A function that displays all the user information from the database
     func fillProfile(){
         let realm = try! Realm()
         let profile = realm.objects(Profile.self)
@@ -54,7 +82,9 @@ class ProfileViewController: UIViewController {
         }
     }
     
+    //A function that calculates the average glucose, carbs, and blood pressure
     func avgCalculation() {
+        //Checks if the whole table view is empty (if nothing is initialized)
         if mainInstance.logArrayCount == 0 {
             let zero = 0
             avgLabel.text = String(zero)
