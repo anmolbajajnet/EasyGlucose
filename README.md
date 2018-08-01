@@ -31,24 +31,31 @@ class MainInstance -> This is a global class where global variables are stored t
     func loadData()
     
 A function that displays the log values into each cell
+
     override func tableView()
 
 A function that saves the user intputs into the mainInstance class
+
     override func prepare()
     
 A function that changes the language from the default english to simplified chinese
+
     func changeLang()
 
 A function that displays all the user information from the database
+
     func fillProfile()
 
 A function that calculates the average glucose, carbs, and blood pressure
+
     func avgCalculation()
 
 This funciton gets called and shows an alert when the glucose input is empty
+
     func emptyGlucoseAlert() 
  
  Display the default chart displaying the glucose values
+
     func drawDefaultChart()
  
  
