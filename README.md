@@ -10,12 +10,45 @@ Please only push your code to this repo if it builds without any warnings or err
 Steps:
 
 1) Pull this to your local computer
-2) Install cocoapods
+2) Install cocoapods. Cocoa is Apple’s Application Programming Interface (API) for their operating system iOS
+and macOS. iOS applications rely on many Cocoa libraries to be fully functional. We plan to
+use the most popular “Cocoa Dependency Manager” called CocoaPods. It’s a powerful tool
+that “resolves dependencies between libraries, fetches source code for all dependencies, and
+creates and maintains an Xcode workspace.”.
   - Locate the application folder from the Terminal
   - enter the 'pod install' command
   - always open the .xcworkspace file, NOT the .xcodeproj
-3) begin coding!
-
-Consider creating a branch to do your programming on. If there are any problems with your code, can simply delete the branch and start anew.
+3) Please select iPhone SE as the phone model as our application works best on small screen, budget-friendly phone.
 
 For Realm => https://realm.io/docs/swift/latest/ this is extremely helpful!
+
+Functions: 
+
+class MainInstance -> This is a global class where global variables are stored the class gets called using mainInstance
+  - when mainInstance.engLang = false, the entire app is translated into Chinese
+  
+ A function that puts all the glucose values into an array
+    func loadData()
+    
+A function that displays the log values into each cell
+    override func tableView()
+
+A function that saves the user intputs into the mainInstance class
+    override func prepare()
+    
+A function that changes the language from the default english to simplified chinese
+    func changeLang()
+
+A function that displays all the user information from the database
+    func fillProfile()
+
+A function that calculates the average glucose, carbs, and blood pressure
+    func avgCalculation()
+
+This funciton gets called and shows an alert when the glucose input is empty
+    func emptyGlucoseAlert() 
+ 
+ Display the default chart displaying the glucose values
+    func drawDefaultChart()
+ 
+ 
