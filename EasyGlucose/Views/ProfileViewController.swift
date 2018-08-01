@@ -57,7 +57,7 @@ class ProfileViewController: UIViewController {
         }
     }
     
-    //Refresh the average calculation everytime the page is loaded
+  //  Refresh the average calculation everytime the page is loaded
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         avgCalculation()
@@ -85,7 +85,12 @@ class ProfileViewController: UIViewController {
     //A function that calculates the average glucose, carbs, and blood pressure
     func avgCalculation() {
         //Checks if the whole table view is empty (if nothing is initialized)
-        if mainInstance.logArrayCount == 0 {
+        
+        let realm = try! Realm()
+        let data = realm.objects(Log.self)
+        let dataArr = data.map({$0})
+        
+        if dataArr.count == 0 {
             let zero = 0
             avgLabel.text = String(zero)
             avgCarbs.text = String(zero)
@@ -93,9 +98,7 @@ class ProfileViewController: UIViewController {
             
         }
         else {
-            let realm = try! Realm()
-            let data = realm.objects(Log.self)
-            let dataArr = data.map({$0})
+
             var validCarbCount = 0
             var carbSum = 0
             var validBloodPressureCount = 0

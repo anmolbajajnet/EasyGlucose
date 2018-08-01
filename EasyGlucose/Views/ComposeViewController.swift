@@ -156,6 +156,8 @@ class ComposeViewController: UIViewController,UINavigationControllerDelegate, UI
             bloodLabel.text = "血压"
             logLabel.setTitle("记录", for: .normal)
             backLabel.setTitle("返回", for: .normal)
+            mealTimeToggle.setTitle("饭前测量", forSegmentAt: 0)
+            mealTimeToggle.setTitle("饭后测量", forSegmentAt: 1)
             
         }
     }

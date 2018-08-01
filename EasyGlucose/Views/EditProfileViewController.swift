@@ -24,6 +24,7 @@ class EditProfileViewController: UIViewController {
     @IBOutlet weak var saveLabel: UIButton!
     
     
+    //A function that saves the user inputs in the profile page
     @IBAction func saveProfile(_ sender: Any) {
         // delete previous profile
         deletePreviousProfile()
@@ -82,6 +83,10 @@ class EditProfileViewController: UIViewController {
         emailLabel.text = "你的邮箱"
         healthLabel.text = "医生邮箱"
         saveLabel.setTitle("保存资料", for: .normal)
+        diabetesType.setTitle("1型", forSegmentAt: 0)
+        diabetesType.setTitle("2型", forSegmentAt: 1)
+        diabetesType.setTitle("妊娠期", forSegmentAt: 2)
+            
         }
     }
     

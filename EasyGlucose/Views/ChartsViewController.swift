@@ -53,7 +53,9 @@ class ChartsViewController: UIViewController {
             thirtyLabel.setTitle("30天", for: .normal)
             ninetyLabel.setTitle("90天", for: .normal)
             allLabel.setTitle("全部", for: .normal)
-            
+            mealTimeFilterOption.setTitle("饭后", forSegmentAt: 0)
+            mealTimeFilterOption.setTitle("饭前", forSegmentAt: 1)
+            mealTimeFilterOption.setTitle("全部", forSegmentAt: 2)
         }
     }
     override func didReceiveMemoryWarning() {
@@ -78,12 +80,14 @@ class ChartsViewController: UIViewController {
         drawChartByGivenObjects(objects: sortedData)
         // test for null?
     }
+    
     //display the inputs for the last 30 days on the graph
     @IBAction func graphDataFor30Days(_ sender: UIButton) {
         let filteredData = grabDataForXDays(dayCount: 30)
         let sortedData = sortGrabbedData(grabbedData: filteredData)
         drawChartByGivenObjects(objects: sortedData)
     }
+    
     //display the inputs for the last 90 days on the graph
     @IBAction func graphDataFor90Days(_ sender: UIButton) {
         let filteredData = grabDataForXDays(dayCount: 90)
