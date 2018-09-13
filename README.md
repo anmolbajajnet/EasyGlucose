@@ -4,7 +4,7 @@ Welcome!
 
 This is the initial documentation for our app. We will be documenting our classes and important functions in this readme.
 
-<b>Video Demo: https://www.youtube.com/watch?v=L98STTfdX8c&frags=pl%2Cwn
+<b>Video Demo: https://www.youtube.com/watch?v=L98STTfdX8c&frags=pl%2Cwn</b>
 
 Please only push your code to this repo if it builds without any warnings or error. DO NOT push if the build fails.
 
