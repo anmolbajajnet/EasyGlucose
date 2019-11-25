@@ -24,10 +24,11 @@ For Realm => https://realm.io/docs/swift/latest/ this is extremely helpful! Real
 
 Functions: 
 
-class MainInstance -> This is a global class where global variables are stored the class gets called using mainInstance
+class MainInstance -> This is a global class where variables are stored globally, the class gets called using MainInstance
   - when mainInstance.engLang = false, the entire app is translated into Chinese
   
- A function that puts all the glucose values into an array
+A function that puts all the glucose values into an array
+
     func loadData()
     
 A function that displays the log values into each cell
