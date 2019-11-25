@@ -51,11 +51,11 @@ A function that calculates the average glucose, carbs, and blood pressure
 
     func avgCalculation()
 
-This funciton gets called and shows an alert when the glucose input is empty
+A functon that gets called and shows an alert when the glucose input is empty
 
     func emptyGlucoseAlert() 
  
- Display the default chart displaying the glucose values
+A function that displays the default glucose values in a chart
 
     func drawDefaultChart()
  
