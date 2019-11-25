@@ -10,16 +10,15 @@ Please only push your code to this repo if it builds without any warnings or err
 
 Steps:
 
-1) Pull this to your local computer
-2) Install cocoapods. Cocoa is Apple’s Application Programming Interface (API) for their operating system iOS
-and macOS. iOS applications rely on many Cocoa libraries to be fully functional. We plan to
-use the most popular “Cocoa Dependency Manager” called CocoaPods. It’s a powerful tool
+1) Pull to your local computer
+2) Install cocoapods. Cocoa is Apple’s Application Programming Interface (API) for its operating system iOS and macOS. iOS applications rely on many Cocoa libraries to be fully functional. 
+We plan to use the popular “Cocoa Dependency Manager” called CocoaPods. It’s a powerful tool
 that “resolves dependencies between libraries, fetches source code for all dependencies, and
 creates and maintains an Xcode workspace.”.
   - Locate the application folder from the Terminal
   - enter the 'pod install' command
   - always open the .xcworkspace file, NOT the .xcodeproj
-3) Please select iPhone SE as the phone model as our application works best on small screen, budget-friendly phone.
+3) Select iPhone SE as the phone model for the application works best on small screen, budget-friendly phone.
 
 For Realm => https://realm.io/docs/swift/latest/ this is extremely helpful!
 
