@@ -21,7 +21,7 @@ creates and maintains an Xcode workspace.”.
   - always open the .xcworkspace file, NOT the .xcodeproj
 3) Please select iPhone SE as the phone model as our application works best on small screen, budget-friendly phone.
 
-For Realm => https://realm.io/docs/swift/latest/ this is extremely helpful!
+For Realm => https://realm.io/docs/swift/latest/ this is extremely helpful! Realm is a cross-platform mobile database solution designed for mobile applications that you can integrate with your iOS projects.
 
 Functions: 
 
