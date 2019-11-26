@@ -1,23 +1,20 @@
 # EasyGlucose
 
-Welcome! 
-
 This is the initial documentation for our application, we will be documenting our classes and important functions in this readme file.
 
-<b>Video Demo: https://www.youtube.com/watch?v=L98STTfdX8c&frags=pl%2Cwn</b>
+### [Video Demo](https://www.youtube.com/watch?v=L98STTfdX8c&frags=pl%2Cwn)
 
-Only push code to this repository if it builds without any warnings or error. DO NOT push if the build fails.
+> ### Only push code to this repository if it builds without any warnings or error. DO NOT push if the build fails.
 
 Steps:
 
 1) Pull to your local computer
-2) Install cocoapods. Cocoa is Apple’s Application Programming Interface (API) for its operating system iOS and macOS. iOS applications rely on many Cocoa libraries to be fully functional. 
-We plan to use the popular “Cocoa Dependency Manager” called CocoaPods. It’s a powerful tool
-that “resolves dependencies between libraries, fetches source code for all dependencies, and
-creates and maintains an Xcode workspace.”.
-  - Locate the application folder from the Terminal
-  - enter the 'pod install' command
-  - always open the .xcworkspace file, NOT the .xcodeproj
+2) Install cocoapods. 
+> Cocoa is Apple’s Application Programming Interface (API) for its operating system iOS and macOS. iOS applications rely on many Cocoa libraries to be fully functional. 
+> We plan to use the popular “Cocoa Dependency Manager” called CocoaPods. It’s a powerful tool that “resolves dependencies between libraries, fetches source code for all dependencies, and creates and maintains an Xcode workspace.”.
+>  - Locate the application folder from the Terminal
+>  - enter the 'pod install' command
+>  - always open the .xcworkspace file, NOT the .xcodeproj
 3) Select iPhone SE as the phone model for the application works best on small screen, budget-friendly phone.
 
 For Realm => https://realm.io/docs/swift/latest/ this is extremely helpful! Realm is a cross-platform mobile database solution designed for mobile applications that you can integrate with your iOS projects.
